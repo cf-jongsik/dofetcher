@@ -1,0 +1,23 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "dofetcher",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-04-09",
+	"migrations": [
+		{
+			"new_sqlite_classes": ["FetchDO"],
+			"tag": "v1"
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "FetchDO",
+				"name": "FETCH_DO"
+			}
+		]
+	},
+	"observability": {
+		"enabled": true
+	}
+}
